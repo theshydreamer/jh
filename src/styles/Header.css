@@ -1,0 +1,123 @@
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0; /* Or your desired background */
+}
+
+/* Header container with frosted glass effect */
+.header {
+  display: flex;  /* Using Flexbox for layout */
+  justify-content: space-between;  /* Distributes space between elements */
+  align-items: center;  /* Vertically centers the elements */
+  position: sticky;  /* Makes the header stick to the top */
+  top: 0;  /* Ensures it sticks at the top */
+  z-index: 10;  /* Keeps the header above other content */
+  background-color: #121212;  /* Semi-transparent black background */
+  color: #ecf0f1;  /* Light text for contrast */
+  padding: 20px 30px;  /* Adjusted padding for spacing */
+  backdrop-filter: blur(100px);  /* Adds the frosted glass effect */
+  -webkit-backdrop-filter: blur(50px);  /* For Safari */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.2);  /* Stronger shadow effect */
+  transition: background-color 0.5s ease, backdrop-filter 0.5s ease, box-shadow 0.5s ease;  /* Smooth animation */
+}
+
+/* Header text (H1) aligned to the left */
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0;  /* Remove bottom margin */
+  text-transform: uppercase;
+  text-shadow: 5px 5px 10px #66ccff;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ecf0f1;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect on links */
+nav ul li a:hover {
+  color: #66ccff;  /* Blue color on hover */
+}
+
+/* Burger button (hidden by default) */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.burger-line {
+  width: 30px;
+  height: 4px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Show the burger menu */
+  .burger-menu {
+    display: flex;
+  }
+
+  /* Hide the nav links by default */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background-color: #121212;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Show the nav links when active (burger button clicked) */
+  nav ul.show {
+    display: flex;
+  }
+
+  /* Modify the font sizes on mobile */
+  .header h1 {
+    font-size: 2rem;  /* Smaller font size for smaller screens */
+  }
+
+  nav ul li a {
+    font-size: 1.5rem;  /* Larger font size on mobile */
+  }
+}
+
+/* Animation for frosted glass effect */
+.header:hover {
+  backdrop-filter: blur(15px); /* Stronger blur on hover */
+}

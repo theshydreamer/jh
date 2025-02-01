@@ -1,0 +1,91 @@
+/* General styling for Projects */
+.projects {
+  background-color: #121212;
+  padding: 40px;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  text-align: center;
+  height: auto;
+}
+
+/* Heading Styling */
+.projects h1 {
+  font-size: 3rem;
+  color: #66ccff;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px #66ccff, 0 0 20px #66ccff, 0 0 30px #66ccff;
+}
+
+/* Project content container */
+.projects-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+/* Project Container Style */
+.project-container {
+  background-color: #222222;
+  padding: 30px; /* Increased padding for larger container */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 1000px; /* Increased max width for larger container */
+  height: auto; /* Set a fixed height for better structure */
+  border: 2px solid #66ccff; /* Neon border */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+/* Hover effect for projects */
+.project-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #66ccff, 0 0 40px #66ccff;
+}
+
+/* Project titles */
+.project-container h2 {
+  font-size: 1.5rem;
+  color: #66ccff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px #66ccff, 0 0 10px #66ccff;
+}
+
+/* Project description and technologies */
+.project-container p {
+  text-align: justify;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+/* Image Styling */
+.project-container img {
+  width: 100%;
+  height: 250px; /* Fixed height for images */
+  object-fit: cover; /* Ensures the image covers the space properly */
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border: 2px solid #66ccff; /* Border around the image */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .projects-content {
+    grid-template-columns: 1fr;
+  }
+
+  .project-container {
+    max-width: 90%;
+  }
+
+  .project-container img {
+    height: auto; /* Allow images to scale on smaller screens */
+  }
+}

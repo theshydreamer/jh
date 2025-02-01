@@ -1,0 +1,91 @@
+/* General styling for Skills */
+.skills {
+  text-align: center;
+  padding: 50px;
+  background-color: #121212; /* Dark background */
+  font-family: 'Arial', sans-serif;
+  color: #ffffff; /* White text */
+  height: auto;
+}
+
+/* Heading Styling */
+.skills h1 {
+  font-size: 3rem;
+  color: #66ccff;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px #66ccff, 0 0 20px #66ccff, 0 0 30px #66ccff;
+}
+
+/* Skills content container */
+.skills-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+  margin-top: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Skill Container Style */
+.skills-container {
+  background-color: #222222;
+  padding: 30px; /* Larger padding for consistency */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 1000px; /* Matches project container */
+  border: 2px solid #66ccff; /* Neon border */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+/* Hover effect for skills */
+.skills-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #66ccff, 0 0 40px #66ccff;
+}
+
+/* Skill titles */
+.skills-container h2 {
+  font-size: 1.5rem;
+  color: #66ccff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px #66ccff, 0 0 10px #66ccff;
+}
+
+/* Skill description */
+
+
+/* Skill list */
+.skills-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-container li {
+  font-size: 1.2rem;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 5px #66ccff, 0 0 10px #66ccff;
+}
+
+/* Remove bottom border from last item */
+.skills-container li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-content {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-container {
+    max-width: 90%;
+  }
+}

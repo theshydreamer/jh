@@ -1,0 +1,191 @@
+.home {
+  display: flex; /* Flexbox to arrange content side by side */
+  justify-content: space-between; /* Align left and right content */
+  align-items: center; /* Vertically align content */
+  padding: 40px;
+  background-color: #121212;
+  min-height: 100vh; /* Full height of the viewport */
+  flex-direction: row; /* Stack content vertically for responsiveness */
+  gap: 10px; /* Reduced space between sections */
+}
+
+/* Content container styles */
+.content-container {
+  display: flex;
+  justify-content: center; /* Align content to the left */
+  align-items: center; /* Align items at the top */
+  gap: 10px; /* Reduced space between content-left and content-right */
+  flex: 1; /* Take up available space */
+  max-width: 800px; /* Limit the width of the content container */
+  width: 100%; /* Ensure it doesn't take up more than its parent */
+  margin: 0 auto; /* Center the content container */
+}
+
+/* Left content (text and buttons) styles */
+/* Left content (text and buttons) styles */
+/* Left content (text and buttons) styles */
+.content-left {
+  flex: 1; /* Take up available space on the left side by default (desktop and laptop views) */
+  text-align: center;
+  padding-right: 40px;
+  background-color: #121212;
+  padding: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  margin-left: 10px;
+  border: 2px solid #66ccff;
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.6);
+}
+
+/* Media query for mobile views (smaller screen sizes) */
+@media (max-width: 768px) {
+  .content-left {
+    flex: 0 0 50%; /* Take up 50% of the available space on mobile */
+  }
+}
+
+/* Media query for larger screens (laptop/desktop views) */
+@media (min-width: 769px) {
+  .content-left {
+    flex: 1; /* Return to taking up full space on larger screens */
+  }
+}
+
+
+.content-left:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #66ccff, 0 0 40px #66ccff;
+}
+
+/* Right content (image) styles */
+.content-right {
+  flex: 1; /* Take up available space on the right side */
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+}
+
+/* Make the image hidden on mobile screens and adjust on larger screens */
+.content-right img {
+  max-width: 50%; /* Ensure image doesn't overflow */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Round corners of the image */
+  box-shadow: 0 0 50px rgba(40, 130, 175, 0.5); /* Lighter glowing border shadow */
+}
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column; /* Stack the content vertically */
+    padding: 20px;
+  }
+
+  .content-container {
+    flex-direction: column; /* Stack content inside content-container */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content-right {
+    display: none; /* Hide the image on smaller screens */
+  }
+
+  .content-left {
+    text-align: center;
+    margin-bottom: 20px; /* Add spacing between sections */
+  }
+}
+
+/* Heading styles */
+.home h1 {
+  font-weight: bold;
+  color: #66ccff;
+  font-size: 2.1rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInText 1s 0.3s forwards; /* Fade in animation */
+}
+
+/* Paragraph styles */
+.home p {
+  color: #66ccff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInText 1s 0.6s forwards; /* Fade in animation */
+  text-transform: uppercase;
+}
+
+/* Animation for the content-left container */
+@keyframes fadeInContent {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Start from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+/* Animation for the text appearance */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+/* Button container styles */
+.home-buttons {
+  display: flex; /* Align buttons horizontally */
+  justify-content: center; /* Center buttons */
+  gap: 20px; /* Add space between buttons */
+  margin-top: 30px;
+}
+
+/* Button styles */
+.home button {
+  padding: 10px 20px;
+  background-color: #66ccff; /* Button starts with the neon color */
+  border: 2px solid #66ccff; /* Neon border effect */
+  color: #121212; /* Text color is dark initially */
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.home button:hover {
+  background-color: #121212; /* Button turns dark on hover */
+  color: #66ccff; /* Text turns neon blue on hover */
+  box-shadow: 0 0 10px #66ccff, 0 0 20px #66ccff; /* Neon glow effect */
+}
+
+/* Footer Icons Styles */
+.footer-icons {
+  display: flex; /* Flexbox to align icons horizontally */
+  justify-content: center; /* Center the icons horizontally */
+  gap: 20px; /* Space between icons */
+  margin-top: 20px; /* Space from the buttons */
+  margin-bottom: 20px;
+}
+
+.footer-icons .icon-link {
+  font-size: 15px; /* Icon size */
+  color: white;    /* Icon color */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for icons */
+.footer-icons .icon-link:hover {
+  transform: scale(1.2); /* Increase size on hover */
+  color: #66ccff; /* Change color to neon blue on hover */
+}

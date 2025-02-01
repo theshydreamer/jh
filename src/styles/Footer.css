@@ -1,0 +1,33 @@
+/* Footer Styling */
+.footer {
+  background-color: #121212; /* Dark background */
+  padding: 0px 0;         /* Padding for footer */
+  text-align: center;      /* Center the content */
+  font-family: 'Arial', sans-serif; /* Font family */
+  position: relative;      /* Change from fixed to relative */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: transform 0.3s ease; /* Smooth transition for sliding */
+  transform: translateY(100%); /* Initially hide footer */
+  height: auto;
+}
+
+/* Show footer when it's at the bottom of the page */
+.footer.show-footer {
+  transform: translateY(0); /* Slide in from the bottom */
+}
+
+/* Copyright Text Styling */
+.footer-text {
+  color: white;            /* White text color */
+  font-size: 1.5rem;         /* Font size */
+  display: flex;           /* Flexbox to align icon and text */
+  justify-content: center; /* Center the content */
+  align-items: center;     /* Vertically align */
+  gap: 10px;                /* Space between the copyright icon and text */
+}
+
+.footer-text i {
+  font-size: 30px;         /* Icon size */
+}

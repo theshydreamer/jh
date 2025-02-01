@@ -1,0 +1,82 @@
+/* General Styling */
+.about {
+  background-color: #121212;
+  padding: 40px;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  text-align: center;
+  height: auto;
+}
+
+/* Heading */
+.about h1 {
+  font-size: 3rem;
+  color: #66ccff;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px #66ccff, 0 0 20px #66ccff, 0 0 30px #66ccff;
+}
+
+/* Container for the About content */
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+/* Container for personal info */
+.personal-info-container,
+.education-container,
+.experience-container {
+  background-color: #222222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border: 2px solid #66ccff; /* Neon border */
+  transition: transform 0.3s ease-in-out;
+}
+
+.personal-info-container:hover,
+.education-container:hover,
+.experience-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #66ccff, 0 0 40px #66ccff;
+}
+
+/* Container titles */
+h2 {
+  font-size: 2rem;
+  color: #66ccff;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px #66ccff, 0 0 10px #66ccff;
+}
+
+/* Styling for the information in each section */
+p {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #ccc;
+  text-shadow: 0 0 5px #66ccff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .personal-info-container,
+  .education-container,
+  .experience-container {
+    max-width: 100%;
+  }
+}
