@@ -1,6 +1,7 @@
 import React from 'react';
 import image from '../assets/ams.png';
-import image1 from '../assets/portfolio.png';
+import image1 from '../assets/lt.png';
+import image2 from '../assets/portfolio.png';
 import '../styles/Projects.css';
 
 function Projects() {
@@ -17,8 +18,15 @@ function Projects() {
           <p>Hardware & Techonologies: Raspberry Pi, RFID Card and Scanner, Monitor, Power Supply and Wall Mount Enclosure</p>
         </div>
         <div className="project-container">
+          <h2>Legislative Tracker</h2>
+          <img src={image1} alt="Legislative Tracker" />
+          <p>Description: The Legislative Tracker is a dynamic web application designed to help users monitor the progress of bills, ordinances, and resolutions through the legislative process. This tool offers a comprehensive and user-friendly interface, providing real-time updates and detailed information on legislative activities.</p>
+          <p>Programming Languages & Frameworks: React.js, JavaScript, Node.js, Express.js</p>
+          <p>Database & Cloud Services: PostgreSQL</p>
+        </div>
+        <div className="project-container">
           <h2>Portfolio Website</h2>
-          <img src={image1} alt="Portfolio Website" />
+          <img src={image2} alt="Portfolio Website" />
           <p>Description: This is my personal portfolio website, built as the first project in my journey as a software developer. It showcases my skills, projects, and passion for technology</p>
           <p>Programming Languages & Frameworks: React.js, JavaScript</p>
         </div>
