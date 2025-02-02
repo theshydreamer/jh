@@ -24,12 +24,6 @@ function Projects() {
           <p>Programming Languages & Frameworks: React.js, JavaScript, Node.js, Express.js</p>
           <p>Database & Cloud Services: PostgreSQL</p>
         </div>
-        <div className="project-container">
-          <h2>Portfolio Website</h2>
-          <img src={image2} alt="Portfolio Website" />
-          <p>Description: This is my personal portfolio website, built as the first project in my journey as a software developer. It showcases my skills, projects, and passion for technology</p>
-          <p>Programming Languages & Frameworks: React.js, JavaScript</p>
-        </div>
       </div>
     </div>
   );
