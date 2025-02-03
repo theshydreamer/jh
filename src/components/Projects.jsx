@@ -1,7 +1,7 @@
 import React from 'react';
 import image from '../assets/ams.png';
 import image1 from '../assets/lt.png';
-import image2 from '../assets/portfolio.png';
+// import image2 from '../assets/portfolio.png';
 import '../styles/Projects.css';
 
 function Projects() {
