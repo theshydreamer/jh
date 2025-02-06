@@ -29,6 +29,7 @@ body {
 
 /* Header text (H1) aligned to the left */
 .header h1 {
+  color: #66ccff;
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0;  /* Remove bottom margin */  
